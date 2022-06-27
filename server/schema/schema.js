@@ -1,4 +1,5 @@
-const { projects, clients } = require('../sampleData')
+const Project = require('../models/Project')
+const Client = require('../models/Client')
 
 const { GraphQLObjectType, GraphQLNonNull, GraphQLID, GraphQLString,
     GraphQLSchema,
@@ -8,14 +9,14 @@ const ProjectType = new GraphQLObjectType({
     name: 'Project',
     fields: () => ({
         id: { type: GraphQLNonNull(GraphQLID) },
-        clientId: { type: GraphQLNonNull(GraphQLID) },
+        clientId: { type: GraphQLID },
         name: { type: GraphQLString },
         description: { type: GraphQLString },
         status: { type: GraphQLString },
         client: {
             type: ClientType,
             resolve: (parent, args) => {
-                return clients.find(client => client.id === parent.id)
+                return Client.findById({ id: parent.clientId })
             }
         }
     })
@@ -36,8 +37,8 @@ const RootQuery = new GraphQLObjectType({
     fields: {
         clients: {
             type: new GraphQLList(ClientType),
-            resolve: () => {
-                return clients
+            resolve: (parent, args) => {
+                return Client.find()
             }
         },
         client: {
@@ -46,13 +47,13 @@ const RootQuery = new GraphQLObjectType({
                 id: { type: GraphQLID }
             },
             resolve: (parent, args) => {
-                return clients.find((client) => client.id === args.id)
+                return Client.findById({ id: args.id })
             }
         },
         projects: {
             type: new GraphQLList(ProjectType),
-            resolve: () => {
-                return projects
+            resolve: (parent, args) => {
+                return Project.find()
             }
         },
         project: {
@@ -61,7 +62,7 @@ const RootQuery = new GraphQLObjectType({
                 id: { type: GraphQLID }
             },
             resolve: (parent, args) => {
-                return projects.find((project) => project.id === args.id)
+                return Project.findById({ id: args.id })
             }
         }
     }
