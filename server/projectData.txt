@@ -1,0 +1,39 @@
+[
+    { _id: ObjectId("62bacbbd73d7dd78c1835f45"),
+    clientId: ObjectId("62bacb6373d7dd78c1835f3e"),
+    name: 'Dating App',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.',
+    status: 'In Progress'
+    }
+  { _id: ObjectId("62bacbbd73d7dd78c1835f46"),
+    clientId: ObjectId("62bacb6373d7dd78c1835f3f"),
+    name: 'SEO Project',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.',
+    status: 'In Progress'
+    }
+  { _id: ObjectId("62bacbbd73d7dd78c1835f47"),
+    clientId: ObjectId("62bacb6373d7dd78c1835f40"),
+    name: 'Design Prototype',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.',
+    status: 'Done'
+    }
+  { _id: ObjectId("62bacbbd73d7dd78c1835f48"),
+    clientId: ObjectId("62bacb6373d7dd78c1835f41"),
+    name: 'Auction Website',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.',
+    status: 'In Progress'
+    }
+  { _id: ObjectId("62bed56e7cb29b24d9ef56d2"),
+    clientId: ObjectId("62bacb6373d7dd78c1835f3d"),
+    name: 'eCommerce Website',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.',
+    status: 'In Progress'
+    }
+  { _id: ObjectId("62c030cc2f56a4c115127e1d"),
+    name: '1234567',
+    description: 'dfsfee',
+    status: 'In Progress',
+    clientId: ObjectId("62bacb6373d7dd78c1835f3e"),
+    __v: 0
+    }
+]
